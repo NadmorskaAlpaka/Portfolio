@@ -5,6 +5,7 @@
           1.Generic
           2.Nav
           3.LandingPage
+          4.About
    ======================== */
 
 /* ========================
@@ -21,7 +22,15 @@
     --primary-color: #1c2c36;
     --secondary-color: #10181f; 
     --third-color: #FFFFFF;
-    --accent-color: #FEB500;
+    --accent-color: #FFCD2D;
+}
+
+:root .light-mode{
+    transition: all 300ms ease;
+    --primary-color: #2F4858;
+    --secondary-color: #008C7F; 
+    --third-color: #FFFFFF;
+    --accent-color: #FFCD2D;
 }
 
 html{
@@ -78,6 +87,21 @@ a{
     transform: scale(0.85);
 }
 
+.fa-circle-half-stroke{
+    position: fixed;
+    color: var(--third-color);
+    font-size: 28px;
+    right: 28px;
+    top: 28px;
+}
+
+.section__title{
+    text-align: center;
+    font-size: 48px;
+    color: var(--third-color);
+    letter-spacing: 2px;
+}
+
 /* ========================
              2.Nav
    ======================== */
@@ -96,6 +120,18 @@ nav{
     flex-direction: column;
     align-items: center;
     justify-content: space-between;
+    animation: slide-in 600ms 200ms backwards;
+}
+
+@keyframes slide-in {
+    0%{
+        opacity: 0;
+        transform: translateX(-400px);
+    }
+    100%{
+        opacity: 1;
+        transform: translateX(0);
+    }
 }
 
 .logo--wrapper{
@@ -115,6 +151,13 @@ nav{
 .logo:active{
     transform: rotate(15deg) scale(0.75);
 }
+
+.lists--wrapper{
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
 
 .nav__link--list{
     display: flex;
@@ -192,11 +235,24 @@ nav{
     font-size: 100px;
     letter-spacing: 4px;
     line-height: 1;
+    animation: fade-up 600ms 200ms backwards;
 }
 
 .sub-title{
     color: var(--third-color);
     letter-spacing: 2px;
+    animation: fade-up 600ms 400ms backwards;
+}
+
+@keyframes fade-up {
+    0%{
+        opacity: 0;
+        transform: translateY(40px);
+    }
+    100%{
+        opacity: 1;
+        transform: translateY(0px);
+    }
 }
 
 .landing-page__img--wrapper{
@@ -204,6 +260,16 @@ nav{
     position: relative;
     height: 100vh; 
     width: 38%;
+    animation: opacity-animation 600ms 400ms backwards;
+}
+
+@keyframes opacity-animation{
+    0%{
+        opacity: 0;
+    }
+    100%{
+        opacity: 1;
+    }
 }
 
 .landing-page__img{
@@ -216,6 +282,7 @@ nav{
     width: 50px;
     position: absolute;
 }
+
 
 .bee1{
     top: 50%;
@@ -232,7 +299,7 @@ nav{
 .bee3{
     top: 20%;
     left: 10%;
-    animation: float 7s infinite;
+    animation: float 4s infinite;
 }
 
 @keyframes fly {
@@ -282,3 +349,78 @@ nav{
        transform: scale(1) rotate(360deg) translateX(40px) rotate(180deg);
     }
  }
+
+ /* ========================
+            4.About
+   ======================== */
+#about{
+    margin: 60px 0;
+}
+
+.about--wrapper{
+    display: flex;
+    justify-content: space-between;
+    margin-top: 40px;
+}
+
+.about__description--wrapper,
+.about__technology-stack--wrapper{
+    width: 49%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.about__title{
+    font-size: 30px;
+    color: var(--third-color);
+    letter-spacing: 1px;
+    margin-bottom: 20px;
+}
+
+.about__description{
+    padding: 4px 0;
+    font-size: 22px;
+    color: var(--third-color);
+    letter-spacing: 1px;
+    line-height: 1.3;
+    text-align: center;
+}
+
+.technology-stack{
+    display: flex;
+}
+
+.technology__box{
+    position: relative;
+    display: flex;
+    padding: 4px;
+    width: 25%;
+}
+
+.technology__img{
+    transition: all 300ms ease;
+}
+
+.technology__box:hover .technology__img{
+    transform: scale(0.9);
+    opacity: 0.75;
+}
+
+.technology__name{
+    position: absolute;
+    left: 50%;
+    bottom: 20px;
+    z-index: -1;
+    opacity: 0;
+    transform: translate(-50%);
+    font-size: 18px;
+    color: var(--third-color);
+    letter-spacing: 1px;
+    transition: all 300ms ease;
+}
+
+.technology__box:hover .technology__name{
+    opacity: 1;
+    bottom: -20px;
+}

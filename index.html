@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -7,10 +8,13 @@
     <link rel="icon" href="/assets/bee.svg">
     <link rel="stylesheet" type="text/css" href="/css/index.css">
     <script src="https://kit.fontawesome.com/eabd7bfc13.js" crossorigin="anonymous"></script>
+    <script src="/js/index.js"></script>
     <title>Grzegorz Szerszeń</title>
 </head>
+
 <body>
     <div class="body--wrapper">
+        <i class="fa-solid fa-circle-half-stroke click" onclick="toogleMode()"></i>
         <div class="nav--wrapper">
             <nav>
                 <figure class="logo--wrapper">
@@ -21,34 +25,22 @@
                 <div class="lists--wrapper">
                     <ul class="nav__link--list">
                         <li class="nav__link click">
-                            <a 
-                                href="#landing-page" 
-                                class="nav__link--anchor link--hover-effect"
-                            >
+                            <a href="#landing-page" class="nav__link--anchor link--hover-effect">
                                 Home
                             </a>
                         </li>
                         <li class="nav__link click">
-                            <a 
-                                href="#about" 
-                                class="nav__link--anchor link--hover-effect"
-                            >
+                            <a href="#about" class="nav__link--anchor link--hover-effect">
                                 About
                             </a>
                         </li>
                         <li class="nav__link click">
-                            <a 
-                                href="" 
-                                class="nav__link--anchor link--hover-effect"
-                            >
+                            <a href="#projects" class="nav__link--anchor link--hover-effect">
                                 Projects
                             </a>
                         </li>
                         <li class="nav__link click">
-                            <a 
-                                href="" 
-                                class="nav__link--anchor link--hover-effect"
-                            >
+                            <a href="" class="nav__link--anchor link--hover-effect">
                                 Contact
                             </a>
                         </li>
@@ -83,73 +75,90 @@
                         <div class="landing-page__content--wrapper">
                             <h1 class="title">
                                 Hey, <br>
-                                I'm 
+                                I'm
                                 <span class="orange-text">
                                     Grzegorz
                                 </span>
                             </h1>
                             <h2 class="sub-title">
-                                Frontend Software Engineer
+                                Frontend Developer
                             </h2>
                         </div>
                         <div class="landing-page__img--wrapper">
-                            <img 
-                                class="bee bee1" 
-                                src="/assets/bee.svg" 
-                                alt="bee picture"
-                            >
-                            <img 
-                                class="bee bee2" 
-                                src="/assets/bee.svg" 
-                                alt="bee picture"
-                            >
-                            <img 
-                                class="bee bee3" 
-                                src="/assets/bee.svg" 
-                                alt="bee picture"
-                            >
-                            <img 
-                                class="landing-page__img" 
-                                src="/assets/beehive.svg"  
-                                alt="beehive picture"
-                            >
+                            <img class="bee bee1" src="/assets/bee.svg" alt="bee picture">
+                            <img class="bee bee2" src="/assets/bee.svg" alt="bee picture">
+                            <img class="bee bee3" src="/assets/bee.svg" alt="bee picture">
+                            <img class="landing-page__img" src="/assets/beehive.svg" alt="beehive picture">
                         </div>
                     </section>
-                    <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Tenetur, fuga! Mollitia quia officia quas hic impedit fugiat dignissimos? Perspiciatis maiores, totam deleniti, tenetur architecto iusto omnis sunt modi repellat nostrum, fuga aut. Deleniti suscipit quisquam a vitae error, esse autem qui sed repellendus minus. Sapiente commodi molestias dignissimos, quas quia numquam, suscipit debitis eius ut adipisci nesciunt consequuntur deleniti repellat tempore aliquid est quibusdam! Corporis vel quod, doloribus, dolore ipsum sint nisi qui recusandae est omnis ut aspernatur optio dolores molestias consequatur officia aliquid nulla sunt neque sequi. Possimus ea, quisquam officiis, laboriosam autem perferendis quia cupiditate libero, reprehenderit deleniti iure eaque earum? Earum dicta fugiat maiores quia totam, ut maxime facilis quis magni. Quos culpa aliquid atque aperiam, eos quia expedita veritatis! At iste, repellat sed odio quae quod aperiam perspiciatis veniam! Molestias sit fugit iusto quas praesentium reiciendis, asperiores dolorem. Harum, commodi magnam magni facilis quos incidunt ullam libero ad aperiam expedita dolorum labore, quod nisi rerum assumenda voluptatum ducimus repudiandae minus laboriosam excepturi adipisci perferendis et quaerat cum? Officia in quasi reprehenderit dicta quisquam natus voluptatem! Qui sunt eligendi repudiandae. Unde, minima quaerat necessitatibus incidunt maiores molestias debitis nulla, facilis nisi ipsam quod, beatae blanditiis laudantium tempore?
-                    </p>
-                    <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Tenetur, fuga! Mollitia quia officia quas hic impedit fugiat dignissimos? Perspiciatis maiores, totam deleniti, tenetur architecto iusto omnis sunt modi repellat nostrum, fuga aut. Deleniti suscipit quisquam a vitae error, esse autem qui sed repellendus minus. Sapiente commodi molestias dignissimos, quas quia numquam, suscipit debitis eius ut adipisci nesciunt consequuntur deleniti repellat tempore aliquid est quibusdam! Corporis vel quod, doloribus, dolore ipsum sint nisi qui recusandae est omnis ut aspernatur optio dolores molestias consequatur officia aliquid nulla sunt neque sequi. Possimus ea, quisquam officiis, laboriosam autem perferendis quia cupiditate libero, reprehenderit deleniti iure eaque earum? Earum dicta fugiat maiores quia totam, ut maxime facilis quis magni. Quos culpa aliquid atque aperiam, eos quia expedita veritatis! At iste, repellat sed odio quae quod aperiam perspiciatis veniam! Molestias sit fugit iusto quas praesentium reiciendis, asperiores dolorem. Harum, commodi magnam magni facilis quos incidunt ullam libero ad aperiam expedita dolorum labore, quod nisi rerum assumenda voluptatum ducimus repudiandae minus laboriosam excepturi adipisci perferendis et quaerat cum? Officia in quasi reprehenderit dicta quisquam natus voluptatem! Qui sunt eligendi repudiandae. Unde, minima quaerat necessitatibus incidunt maiores molestias debitis nulla, facilis nisi ipsam quod, beatae blanditiis laudantium tempore?
-                    </p>
-                    <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Tenetur, fuga! Mollitia quia officia quas hic impedit fugiat dignissimos? Perspiciatis maiores, totam deleniti, tenetur architecto iusto omnis sunt modi repellat nostrum, fuga aut. Deleniti suscipit quisquam a vitae error, esse autem qui sed repellendus minus. Sapiente commodi molestias dignissimos, quas quia numquam, suscipit debitis eius ut adipisci nesciunt consequuntur deleniti repellat tempore aliquid est quibusdam! Corporis vel quod, doloribus, dolore ipsum sint nisi qui recusandae est omnis ut aspernatur optio dolores molestias consequatur officia aliquid nulla sunt neque sequi. Possimus ea, quisquam officiis, laboriosam autem perferendis quia cupiditate libero, reprehenderit deleniti iure eaque earum? Earum dicta fugiat maiores quia totam, ut maxime facilis quis magni. Quos culpa aliquid atque aperiam, eos quia expedita veritatis! At iste, repellat sed odio quae quod aperiam perspiciatis veniam! Molestias sit fugit iusto quas praesentium reiciendis, asperiores dolorem. Harum, commodi magnam magni facilis quos incidunt ullam libero ad aperiam expedita dolorum labore, quod nisi rerum assumenda voluptatum ducimus repudiandae minus laboriosam excepturi adipisci perferendis et quaerat cum? Officia in quasi reprehenderit dicta quisquam natus voluptatem! Qui sunt eligendi repudiandae. Unde, minima quaerat necessitatibus incidunt maiores molestias debitis nulla, facilis nisi ipsam quod, beatae blanditiis laudantium tempore?
-                    </p>
-                    <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Tenetur, fuga! Mollitia quia officia quas hic impedit fugiat dignissimos? Perspiciatis maiores, totam deleniti, tenetur architecto iusto omnis sunt modi repellat nostrum, fuga aut. Deleniti suscipit quisquam a vitae error, esse autem qui sed repellendus minus. Sapiente commodi molestias dignissimos, quas quia numquam, suscipit debitis eius ut adipisci nesciunt consequuntur deleniti repellat tempore aliquid est quibusdam! Corporis vel quod, doloribus, dolore ipsum sint nisi qui recusandae est omnis ut aspernatur optio dolores molestias consequatur officia aliquid nulla sunt neque sequi. Possimus ea, quisquam officiis, laboriosam autem perferendis quia cupiditate libero, reprehenderit deleniti iure eaque earum? Earum dicta fugiat maiores quia totam, ut maxime facilis quis magni. Quos culpa aliquid atque aperiam, eos quia expedita veritatis! At iste, repellat sed odio quae quod aperiam perspiciatis veniam! Molestias sit fugit iusto quas praesentium reiciendis, asperiores dolorem. Harum, commodi magnam magni facilis quos incidunt ullam libero ad aperiam expedita dolorum labore, quod nisi rerum assumenda voluptatum ducimus repudiandae minus laboriosam excepturi adipisci perferendis et quaerat cum? Officia in quasi reprehenderit dicta quisquam natus voluptatem! Qui sunt eligendi repudiandae. Unde, minima quaerat necessitatibus incidunt maiores molestias debitis nulla, facilis nisi ipsam quod, beatae blanditiis laudantium tempore?
-                    </p>
-                    <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Tenetur, fuga! Mollitia quia officia quas hic impedit fugiat dignissimos? Perspiciatis maiores, totam deleniti, tenetur architecto iusto omnis sunt modi repellat nostrum, fuga aut. Deleniti suscipit quisquam a vitae error, esse autem qui sed repellendus minus. Sapiente commodi molestias dignissimos, quas quia numquam, suscipit debitis eius ut adipisci nesciunt consequuntur deleniti repellat tempore aliquid est quibusdam! Corporis vel quod, doloribus, dolore ipsum sint nisi qui recusandae est omnis ut aspernatur optio dolores molestias consequatur officia aliquid nulla sunt neque sequi. Possimus ea, quisquam officiis, laboriosam autem perferendis quia cupiditate libero, reprehenderit deleniti iure eaque earum? Earum dicta fugiat maiores quia totam, ut maxime facilis quis magni. Quos culpa aliquid atque aperiam, eos quia expedita veritatis! At iste, repellat sed odio quae quod aperiam perspiciatis veniam! Molestias sit fugit iusto quas praesentium reiciendis, asperiores dolorem. Harum, commodi magnam magni facilis quos incidunt ullam libero ad aperiam expedita dolorum labore, quod nisi rerum assumenda voluptatum ducimus repudiandae minus laboriosam excepturi adipisci perferendis et quaerat cum? Officia in quasi reprehenderit dicta quisquam natus voluptatem! Qui sunt eligendi repudiandae. Unde, minima quaerat necessitatibus incidunt maiores molestias debitis nulla, facilis nisi ipsam quod, beatae blanditiis laudantium tempore?
-                    </p>
-                    <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Tenetur, fuga! Mollitia quia officia quas hic impedit fugiat dignissimos? Perspiciatis maiores, totam deleniti, tenetur architecto iusto omnis sunt modi repellat nostrum, fuga aut. Deleniti suscipit quisquam a vitae error, esse autem qui sed repellendus minus. Sapiente commodi molestias dignissimos, quas quia numquam, suscipit debitis eius ut adipisci nesciunt consequuntur deleniti repellat tempore aliquid est quibusdam! Corporis vel quod, doloribus, dolore ipsum sint nisi qui recusandae est omnis ut aspernatur optio dolores molestias consequatur officia aliquid nulla sunt neque sequi. Possimus ea, quisquam officiis, laboriosam autem perferendis quia cupiditate libero, reprehenderit deleniti iure eaque earum? Earum dicta fugiat maiores quia totam, ut maxime facilis quis magni. Quos culpa aliquid atque aperiam, eos quia expedita veritatis! At iste, repellat sed odio quae quod aperiam perspiciatis veniam! Molestias sit fugit iusto quas praesentium reiciendis, asperiores dolorem. Harum, commodi magnam magni facilis quos incidunt ullam libero ad aperiam expedita dolorum labore, quod nisi rerum assumenda voluptatum ducimus repudiandae minus laboriosam excepturi adipisci perferendis et quaerat cum? Officia in quasi reprehenderit dicta quisquam natus voluptatem! Qui sunt eligendi repudiandae. Unde, minima quaerat necessitatibus incidunt maiores molestias debitis nulla, facilis nisi ipsam quod, beatae blanditiis laudantium tempore?
-                    </p>
-                    <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Tenetur, fuga! Mollitia quia officia quas hic impedit fugiat dignissimos? Perspiciatis maiores, totam deleniti, tenetur architecto iusto omnis sunt modi repellat nostrum, fuga aut. Deleniti suscipit quisquam a vitae error, esse autem qui sed repellendus minus. Sapiente commodi molestias dignissimos, quas quia numquam, suscipit debitis eius ut adipisci nesciunt consequuntur deleniti repellat tempore aliquid est quibusdam! Corporis vel quod, doloribus, dolore ipsum sint nisi qui recusandae est omnis ut aspernatur optio dolores molestias consequatur officia aliquid nulla sunt neque sequi. Possimus ea, quisquam officiis, laboriosam autem perferendis quia cupiditate libero, reprehenderit deleniti iure eaque earum? Earum dicta fugiat maiores quia totam, ut maxime facilis quis magni. Quos culpa aliquid atque aperiam, eos quia expedita veritatis! At iste, repellat sed odio quae quod aperiam perspiciatis veniam! Molestias sit fugit iusto quas praesentium reiciendis, asperiores dolorem. Harum, commodi magnam magni facilis quos incidunt ullam libero ad aperiam expedita dolorum labore, quod nisi rerum assumenda voluptatum ducimus repudiandae minus laboriosam excepturi adipisci perferendis et quaerat cum? Officia in quasi reprehenderit dicta quisquam natus voluptatem! Qui sunt eligendi repudiandae. Unde, minima quaerat necessitatibus incidunt maiores molestias debitis nulla, facilis nisi ipsam quod, beatae blanditiis laudantium tempore?
-                    </p>
-                    <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Tenetur, fuga! Mollitia quia officia quas hic impedit fugiat dignissimos? Perspiciatis maiores, totam deleniti, tenetur architecto iusto omnis sunt modi repellat nostrum, fuga aut. Deleniti suscipit quisquam a vitae error, esse autem qui sed repellendus minus. Sapiente commodi molestias dignissimos, quas quia numquam, suscipit debitis eius ut adipisci nesciunt consequuntur deleniti repellat tempore aliquid est quibusdam! Corporis vel quod, doloribus, dolore ipsum sint nisi qui recusandae est omnis ut aspernatur optio dolores molestias consequatur officia aliquid nulla sunt neque sequi. Possimus ea, quisquam officiis, laboriosam autem perferendis quia cupiditate libero, reprehenderit deleniti iure eaque earum? Earum dicta fugiat maiores quia totam, ut maxime facilis quis magni. Quos culpa aliquid atque aperiam, eos quia expedita veritatis! At iste, repellat sed odio quae quod aperiam perspiciatis veniam! Molestias sit fugit iusto quas praesentium reiciendis, asperiores dolorem. Harum, commodi magnam magni facilis quos incidunt ullam libero ad aperiam expedita dolorum labore, quod nisi rerum assumenda voluptatum ducimus repudiandae minus laboriosam excepturi adipisci perferendis et quaerat cum? Officia in quasi reprehenderit dicta quisquam natus voluptatem! Qui sunt eligendi repudiandae. Unde, minima quaerat necessitatibus incidunt maiores molestias debitis nulla, facilis nisi ipsam quod, beatae blanditiis laudantium tempore?
-                    </p>
-                    <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Tenetur, fuga! Mollitia quia officia quas hic impedit fugiat dignissimos? Perspiciatis maiores, totam deleniti, tenetur architecto iusto omnis sunt modi repellat nostrum, fuga aut. Deleniti suscipit quisquam a vitae error, esse autem qui sed repellendus minus. Sapiente commodi molestias dignissimos, quas quia numquam, suscipit debitis eius ut adipisci nesciunt consequuntur deleniti repellat tempore aliquid est quibusdam! Corporis vel quod, doloribus, dolore ipsum sint nisi qui recusandae est omnis ut aspernatur optio dolores molestias consequatur officia aliquid nulla sunt neque sequi. Possimus ea, quisquam officiis, laboriosam autem perferendis quia cupiditate libero, reprehenderit deleniti iure eaque earum? Earum dicta fugiat maiores quia totam, ut maxime facilis quis magni. Quos culpa aliquid atque aperiam, eos quia expedita veritatis! At iste, repellat sed odio quae quod aperiam perspiciatis veniam! Molestias sit fugit iusto quas praesentium reiciendis, asperiores dolorem. Harum, commodi magnam magni facilis quos incidunt ullam libero ad aperiam expedita dolorum labore, quod nisi rerum assumenda voluptatum ducimus repudiandae minus laboriosam excepturi adipisci perferendis et quaerat cum? Officia in quasi reprehenderit dicta quisquam natus voluptatem! Qui sunt eligendi repudiandae. Unde, minima quaerat necessitatibus incidunt maiores molestias debitis nulla, facilis nisi ipsam quod, beatae blanditiis laudantium tempore?
-                    </p>
-                    <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Tenetur, fuga! Mollitia quia officia quas hic impedit fugiat dignissimos? Perspiciatis maiores, totam deleniti, tenetur architecto iusto omnis sunt modi repellat nostrum, fuga aut. Deleniti suscipit quisquam a vitae error, esse autem qui sed repellendus minus. Sapiente commodi molestias dignissimos, quas quia numquam, suscipit debitis eius ut adipisci nesciunt consequuntur deleniti repellat tempore aliquid est quibusdam! Corporis vel quod, doloribus, dolore ipsum sint nisi qui recusandae est omnis ut aspernatur optio dolores molestias consequatur officia aliquid nulla sunt neque sequi. Possimus ea, quisquam officiis, laboriosam autem perferendis quia cupiditate libero, reprehenderit deleniti iure eaque earum? Earum dicta fugiat maiores quia totam, ut maxime facilis quis magni. Quos culpa aliquid atque aperiam, eos quia expedita veritatis! At iste, repellat sed odio quae quod aperiam perspiciatis veniam! Molestias sit fugit iusto quas praesentium reiciendis, asperiores dolorem. Harum, commodi magnam magni facilis quos incidunt ullam libero ad aperiam expedita dolorum labore, quod nisi rerum assumenda voluptatum ducimus repudiandae minus laboriosam excepturi adipisci perferendis et quaerat cum? Officia in quasi reprehenderit dicta quisquam natus voluptatem! Qui sunt eligendi repudiandae. Unde, minima quaerat necessitatibus incidunt maiores molestias debitis nulla, facilis nisi ipsam quod, beatae blanditiis laudantium tempore?
-                    </p>
-                    <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Tenetur, fuga! Mollitia quia officia quas hic impedit fugiat dignissimos? Perspiciatis maiores, totam deleniti, tenetur architecto iusto omnis sunt modi repellat nostrum, fuga aut. Deleniti suscipit quisquam a vitae error, esse autem qui sed repellendus minus. Sapiente commodi molestias dignissimos, quas quia numquam, suscipit debitis eius ut adipisci nesciunt consequuntur deleniti repellat tempore aliquid est quibusdam! Corporis vel quod, doloribus, dolore ipsum sint nisi qui recusandae est omnis ut aspernatur optio dolores molestias consequatur officia aliquid nulla sunt neque sequi. Possimus ea, quisquam officiis, laboriosam autem perferendis quia cupiditate libero, reprehenderit deleniti iure eaque earum? Earum dicta fugiat maiores quia totam, ut maxime facilis quis magni. Quos culpa aliquid atque aperiam, eos quia expedita veritatis! At iste, repellat sed odio quae quod aperiam perspiciatis veniam! Molestias sit fugit iusto quas praesentium reiciendis, asperiores dolorem. Harum, commodi magnam magni facilis quos incidunt ullam libero ad aperiam expedita dolorum labore, quod nisi rerum assumenda voluptatum ducimus repudiandae minus laboriosam excepturi adipisci perferendis et quaerat cum? Officia in quasi reprehenderit dicta quisquam natus voluptatem! Qui sunt eligendi repudiandae. Unde, minima quaerat necessitatibus incidunt maiores molestias debitis nulla, facilis nisi ipsam quod, beatae blanditiis laudantium tempore?
-                    </p>
-                    <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Tenetur, fuga! Mollitia quia officia quas hic impedit fugiat dignissimos? Perspiciatis maiores, totam deleniti, tenetur architecto iusto omnis sunt modi repellat nostrum, fuga aut. Deleniti suscipit quisquam a vitae error, esse autem qui sed repellendus minus. Sapiente commodi molestias dignissimos, quas quia numquam, suscipit debitis eius ut adipisci nesciunt consequuntur deleniti repellat tempore aliquid est quibusdam! Corporis vel quod, doloribus, dolore ipsum sint nisi qui recusandae est omnis ut aspernatur optio dolores molestias consequatur officia aliquid nulla sunt neque sequi. Possimus ea, quisquam officiis, laboriosam autem perferendis quia cupiditate libero, reprehenderit deleniti iure eaque earum? Earum dicta fugiat maiores quia totam, ut maxime facilis quis magni. Quos culpa aliquid atque aperiam, eos quia expedita veritatis! At iste, repellat sed odio quae quod aperiam perspiciatis veniam! Molestias sit fugit iusto quas praesentium reiciendis, asperiores dolorem. Harum, commodi magnam magni facilis quos incidunt ullam libero ad aperiam expedita dolorum labore, quod nisi rerum assumenda voluptatum ducimus repudiandae minus laboriosam excepturi adipisci perferendis et quaerat cum? Officia in quasi reprehenderit dicta quisquam natus voluptatem! Qui sunt eligendi repudiandae. Unde, minima quaerat necessitatibus incidunt maiores molestias debitis nulla, facilis nisi ipsam quod, beatae blanditiis laudantium tempore?
-                    </p>
-                    <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Tenetur, fuga! Mollitia quia officia quas hic impedit fugiat dignissimos? Perspiciatis maiores, totam deleniti, tenetur architecto iusto omnis sunt modi repellat nostrum, fuga aut. Deleniti suscipit quisquam a vitae error, esse autem qui sed repellendus minus. Sapiente commodi molestias dignissimos, quas quia numquam, suscipit debitis eius ut adipisci nesciunt consequuntur deleniti repellat tempore aliquid est quibusdam! Corporis vel quod, doloribus, dolore ipsum sint nisi qui recusandae est omnis ut aspernatur optio dolores molestias consequatur officia aliquid nulla sunt neque sequi. Possimus ea, quisquam officiis, laboriosam autem perferendis quia cupiditate libero, reprehenderit deleniti iure eaque earum? Earum dicta fugiat maiores quia totam, ut maxime facilis quis magni. Quos culpa aliquid atque aperiam, eos quia expedita veritatis! At iste, repellat sed odio quae quod aperiam perspiciatis veniam! Molestias sit fugit iusto quas praesentium reiciendis, asperiores dolorem. Harum, commodi magnam magni facilis quos incidunt ullam libero ad aperiam expedita dolorum labore, quod nisi rerum assumenda voluptatum ducimus repudiandae minus laboriosam excepturi adipisci perferendis et quaerat cum? Officia in quasi reprehenderit dicta quisquam natus voluptatem! Qui sunt eligendi repudiandae. Unde, minima quaerat necessitatibus incidunt maiores molestias debitis nulla, facilis nisi ipsam quod, beatae blanditiis laudantium tempore?
-                    </p>
-                    <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Tenetur, fuga! Mollitia quia officia quas hic impedit fugiat dignissimos? Perspiciatis maiores, totam deleniti, tenetur architecto iusto omnis sunt modi repellat nostrum, fuga aut. Deleniti suscipit quisquam a vitae error, esse autem qui sed repellendus minus. Sapiente commodi molestias dignissimos, quas quia numquam, suscipit debitis eius ut adipisci nesciunt consequuntur deleniti repellat tempore aliquid est quibusdam! Corporis vel quod, doloribus, dolore ipsum sint nisi qui recusandae est omnis ut aspernatur optio dolores molestias consequatur officia aliquid nulla sunt neque sequi. Possimus ea, quisquam officiis, laboriosam autem perferendis quia cupiditate libero, reprehenderit deleniti iure eaque earum? Earum dicta fugiat maiores quia totam, ut maxime facilis quis magni. Quos culpa aliquid atque aperiam, eos quia expedita veritatis! At iste, repellat sed odio quae quod aperiam perspiciatis veniam! Molestias sit fugit iusto quas praesentium reiciendis, asperiores dolorem. Harum, commodi magnam magni facilis quos incidunt ullam libero ad aperiam expedita dolorum labore, quod nisi rerum assumenda voluptatum ducimus repudiandae minus laboriosam excepturi adipisci perferendis et quaerat cum? Officia in quasi reprehenderit dicta quisquam natus voluptatem! Qui sunt eligendi repudiandae. Unde, minima quaerat necessitatibus incidunt maiores molestias debitis nulla, facilis nisi ipsam quod, beatae blanditiis laudantium tempore?
-                    </p>
-                    <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Tenetur, fuga! Mollitia quia officia quas hic impedit fugiat dignissimos? Perspiciatis maiores, totam deleniti, tenetur architecto iusto omnis sunt modi repellat nostrum, fuga aut. Deleniti suscipit quisquam a vitae error, esse autem qui sed repellendus minus. Sapiente commodi molestias dignissimos, quas quia numquam, suscipit debitis eius ut adipisci nesciunt consequuntur deleniti repellat tempore aliquid est quibusdam! Corporis vel quod, doloribus, dolore ipsum sint nisi qui recusandae est omnis ut aspernatur optio dolores molestias consequatur officia aliquid nulla sunt neque sequi. Possimus ea, quisquam officiis, laboriosam autem perferendis quia cupiditate libero, reprehenderit deleniti iure eaque earum? Earum dicta fugiat maiores quia totam, ut maxime facilis quis magni. Quos culpa aliquid atque aperiam, eos quia expedita veritatis! At iste, repellat sed odio quae quod aperiam perspiciatis veniam! Molestias sit fugit iusto quas praesentium reiciendis, asperiores dolorem. Harum, commodi magnam magni facilis quos incidunt ullam libero ad aperiam expedita dolorum labore, quod nisi rerum assumenda voluptatum ducimus repudiandae minus laboriosam excepturi adipisci perferendis et quaerat cum? Officia in quasi reprehenderit dicta quisquam natus voluptatem! Qui sunt eligendi repudiandae. Unde, minima quaerat necessitatibus incidunt maiores molestias debitis nulla, facilis nisi ipsam quod, beatae blanditiis laudantium tempore?
-                    </p>
-                    <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Tenetur, fuga! Mollitia quia officia quas hic impedit fugiat dignissimos? Perspiciatis maiores, totam deleniti, tenetur architecto iusto omnis sunt modi repellat nostrum, fuga aut. Deleniti suscipit quisquam a vitae error, esse autem qui sed repellendus minus. Sapiente commodi molestias dignissimos, quas quia numquam, suscipit debitis eius ut adipisci nesciunt consequuntur deleniti repellat tempore aliquid est quibusdam! Corporis vel quod, doloribus, dolore ipsum sint nisi qui recusandae est omnis ut aspernatur optio dolores molestias consequatur officia aliquid nulla sunt neque sequi. Possimus ea, quisquam officiis, laboriosam autem perferendis quia cupiditate libero, reprehenderit deleniti iure eaque earum? Earum dicta fugiat maiores quia totam, ut maxime facilis quis magni. Quos culpa aliquid atque aperiam, eos quia expedita veritatis! At iste, repellat sed odio quae quod aperiam perspiciatis veniam! Molestias sit fugit iusto quas praesentium reiciendis, asperiores dolorem. Harum, commodi magnam magni facilis quos incidunt ullam libero ad aperiam expedita dolorum labore, quod nisi rerum assumenda voluptatum ducimus repudiandae minus laboriosam excepturi adipisci perferendis et quaerat cum? Officia in quasi reprehenderit dicta quisquam natus voluptatem! Qui sunt eligendi repudiandae. Unde, minima quaerat necessitatibus incidunt maiores molestias debitis nulla, facilis nisi ipsam quod, beatae blanditiis laudantium tempore?
-                    </p>
+                    <section id="about">
+                        <h3 class="section__title">
+                            About<span class="orange-text"> me</span>
+                        </h3>
+                        <div class="about--wrapper">
+                            <div class="about__description--wrapper">
+                                <span class="about__title">
+                                    Few words about <span class="orange-text"> me</span>
+                                </span>
+                                <p class="about__description">
+                                    Hi, my name is Grzegorz Szerszeń. I'm a 20 years old Frontend Developer with a
+                                    strong passion for building responsive web applications that provide a great user
+                                    experience.
+                                </p>
+                                <p class="about__description">
+                                    Turning ideas into real life products is what I do best.
+                                </p>
+                            </div>
+                            <div class="about__technology-stack--wrapper">
+                                <span class="about__title">
+                                    My 
+                                        <span class="orange-text">technology</span>
+                                    stack
+                                </span>
+                                <div class="technology-stack">
+                                    <div class="technology__box">
+                                        <img class="technology__img" src="/assets/html-icon.png" alt="html icon">
+                                        <span class="technology__name">
+                                            HTML
+                                        </span>
+                                    </div>
+                                    <div class="technology__box">
+                                        <img class="technology__img" src="/assets/css-icon.png" alt="css icon">
+                                        <span class="technology__name">
+                                            CSS
+                                        </span>
+                                    </div>
+                                    <div class="technology__box">
+                                        <img class="technology__img" src="/assets/js-icon.png" alt="javascript icon">
+                                        <span class="technology__name">
+                                            JavaScript
+                                        </span>
+                                    </div>
+                                    <div class="technology__box">
+                                        <img class="technology__img" src="/assets/react-icon.png" alt="react icon">
+                                        <span class="technology__name">
+                                            React
+                                        </span>
+                                    </div>
+                                <div>
+                            </div>
+                        </div>
+                    </section>
+                    <section id="projects">
+                        <main>
+                            <h3 class="section__title">
+                                My
+                                <span class="orange-text">projects</span>
+                            </h3>
+                            <div class="projects--wrapper">
+                                
+                            </div>
+                        </main>
+                    </section>
                 </div>
             </div>
         </div>
     </div>
 </body>
+
 </html>
