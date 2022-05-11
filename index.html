@@ -10,6 +10,13 @@
     <script src="https://kit.fontawesome.com/eabd7bfc13.js" crossorigin="anonymous"></script>
     <script src="/js/index.js"></script>
     <title>Grzegorz Szerszeń</title>
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js">
+    </script>
+    <script type="text/javascript">
+        (function () {
+            emailjs.init("EGAb_j1LwKVWxP8JP");
+        })();
+    </script>
 </head>
 
 <body>
@@ -40,7 +47,7 @@
                             </a>
                         </li>
                         <li class="nav__link click">
-                            <a href="" class="nav__link--anchor link--hover-effect">
+                            <a href="#contact" class="nav__link--anchor link--hover-effect">
                                 Contact
                             </a>
                         </li>
@@ -90,6 +97,7 @@
                             <img class="bee bee3" src="/assets/bee.svg" alt="bee picture">
                             <img class="landing-page__img" src="/assets/beehive.svg" alt="beehive picture">
                         </div>
+                        <a href="#projects" class="scroll-down__icon"></a>
                     </section>
                     <section id="about">
                         <h3 class="section__title">
@@ -111,8 +119,8 @@
                             </div>
                             <div class="about__technology-stack--wrapper">
                                 <span class="about__title">
-                                    My 
-                                        <span class="orange-text">technology</span>
+                                    My
+                                    <span class="orange-text">technology</span>
                                     stack
                                 </span>
                                 <div class="technology-stack">
@@ -140,9 +148,9 @@
                                             React
                                         </span>
                                     </div>
-                                <div>
-                            </div>
-                        </div>
+                                    <div>
+                                    </div>
+                                </div>
                     </section>
                     <section id="projects">
                         <main>
@@ -151,12 +159,120 @@
                                 <span class="orange-text">projects</span>
                             </h3>
                             <div class="projects--wrapper">
-                                
+                                <div class="project">
+                                    <figure class="project__img--wrapper">
+                                        <img class="project__img" src="/assets/movieskarks_mockup.jpg"
+                                            alt="project image">
+                                    </figure>
+                                    <div class="project__info">
+                                        <span class="project__title">MovieSharks</span>
+                                        <span class="project__stack">ReactJS</span>
+                                        <p class="project__description">
+                                            MovieSharks is a website which is created to give a user easy and fast place
+                                            where he can find movies. Website utilizes The Movie DB API which provide
+                                            huge amount of movies and details about them. ReactJs and technologies such
+                                            as react-router, axios were used in the development process. Aplication have
+                                            some amazing features like dynamic home page background which change after
+                                            every site refresh, skeleton loading state. Webiste is fully responsive and
+                                            designed for all type of devices.
+                                        </p>
+                                        <div class="project__links">
+                                            <a href="" class="project__link">
+                                                <i class="fa-brands fa-github-square click"></i>
+                                            </a>
+                                            <a href="" class="project__link">
+                                                <i class="fa-solid fa-link click"></i>
+                                            </a>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="project">
+                                    <figure class="project__img--wrapper">
+                                        <img class="project__img" src="/assets/matixbike_mockup.jpg"
+                                            alt="project image">
+                                    </figure>
+                                    <div class="project__info">
+                                        <span class="project__title">Matix bike</span>
+                                        <span class="project__stack">ReactJS</span>
+                                        <p class="project__description">
+                                            Refreshed website of Matix bike company which produce tricycle bikes. In
+                                            process of creating ReactJS was used and technologies like react-router and
+                                            framer-motion for pages animation page also have implemented some features
+                                            home page slider, lightbox gallery. Webiste is fully responisive and
+                                            prepared for any type od device. Currently waiting for client response which
+                                            will provide me more data for small changes to applay, hope website will be
+                                            deployed on web soon.
+                                        </p>
+                                        <div class="project__links">
+                                            <a href="" class="project__link">
+                                                <i class="fa-brands fa-github-square click"></i>
+                                            </a>
+                                            <a href="" class="project__link">
+                                                <i class="fa-solid fa-link click"></i>
+                                            </a>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="project">
+                                    <figure class="project__img--wrapper">
+                                        <img class="project__img" src="/assets/assan_mockup.jpg" alt="project image">
+                                    </figure>
+                                    <div class="project__info">
+                                        <span class="project__title">Assan tuning</span>
+                                        <span class="project__stack">HTML,CSS,JS</span>
+                                        <p class="project__description">
+                                            Proposition of home page for car mechanic or workshop developed with HTML,
+                                            CSS and JS. Website is fully responsive and mobile-friendly implemented
+                                            mobile menu.
+                                        </p>
+                                        <div class="project__links">
+                                            <a href="" class="project__link">
+                                                <i class="fa-brands fa-github-square click"></i>
+                                            </a>
+                                            <a href="" class="project__link">
+                                                <i class="fa-solid fa-link click"></i>
+                                            </a>
+                                        </div>
+                                    </div>
+                                </div>
                             </div>
                         </main>
                     </section>
+                    <section id="contact">
+                        <h3 class="section__title">Let's have a chat!</h3>
+                        <span class="section__sub-title">
+                            I'm currently open to new opportunities!
+                        </span>
+                        <div class="contact--wrapper">
+                            <form id="contact__form" onsubmit="contact(event)">
+                                <label class="input__label">Name:</label>
+                                <input class="contact__input" type="text" name="user_name" required>
+                                <label class="input__label">Email:</label>
+                                <input class="contact__input" type="email" name="user_email" required>
+                                <label class="input__label">Message:</label>
+                                <textarea class="contact__textarea" name="message"></textarea>
+                                <button class="btn click">Send it my way!</button>
+                                <div class="contact__loading">
+                                    <i class="fa-solid fa-spinner"></i>
+                                </div>
+                                <div class="contact__success">
+                                    Thanks for the message! Looking forward to speaking to you soon.
+                                </div>
+                            </form>
+                        </div>
+                    </section>
                 </div>
             </div>
+            <footer>
+                <div class="footer--wrapper">
+                    <div>
+                        <a class="go-to-top" href="#">
+                            <img class="footer-bee" src="/assets/bee.svg">
+                            <span class="go-to-top__text">Back to top</span>
+                        </a>
+                    </div>
+                </div>
+            </footer>
         </div>
     </div>
 </body>

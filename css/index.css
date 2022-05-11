@@ -6,6 +6,9 @@
           2.Nav
           3.LandingPage
           4.About
+          5.Projects
+          6.Contact
+          7.Footer
    ======================== */
 
 /* ========================
@@ -100,6 +103,28 @@ a{
     font-size: 48px;
     color: var(--third-color);
     letter-spacing: 2px;
+}
+
+.section__sub-title{
+    display: block;
+    text-align: center;
+    color: var(--third-color);
+    font-size: 20px;
+}
+
+.btn{
+    margin: 12px 0px;
+    font-size: 20px;
+    padding: 12px 44px;
+    border-radius: 8px;
+    color: var(--third-color);
+    background-color: transparent;
+    border-color: var(--secondary-color);
+}
+
+.btn:hover{
+    color: var(--accent-color);
+    border-color: var(--accent-color);
 }
 
 /* ========================
@@ -220,6 +245,7 @@ nav{
          3.LandingPage
    ======================== */
 #landing-page{
+    position: relative;
     display: flex;
     justify-content: space-between;
     min-height: 100vh;
@@ -350,11 +376,49 @@ nav{
     }
  }
 
+.scroll-down__icon{
+    position: absolute;
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 20px;
+    height: 35px;
+    border: 1px solid var(--third-color);
+    border-radius: 18px;
+    transition: all 300ms ease;
+}
+
+.scroll-down__icon::after{
+    content: "";
+    position: absolute;
+    left: 50%;
+    top:5px;
+    transform: translateX(-50%);
+    height: 5px;
+    width: 5px;
+    border-radius: 100%;
+    background-color: var(--third-color);
+    animation: scroll-down 800ms infinite alternate-reverse;
+}
+
+@keyframes scroll-down {
+    0%{
+        transform: translate(-50%, 5px);
+    }
+    100%{
+        transform: translate(-50%, 15px);
+    }
+}
+
+.scroll-down__icon:hover{
+    transform: translateX(-50%) scale(1.15);
+}
+
  /* ========================
             4.About
    ======================== */
 #about{
-    margin: 60px 0;
+    margin-top: 100px;
 }
 
 .about--wrapper{
@@ -423,4 +487,332 @@ nav{
 .technology__box:hover .technology__name{
     opacity: 1;
     bottom: -20px;
+}
+
+/* ========================
+           5.Projects
+   ======================== */
+#projects{
+    margin-top: 100px;
+}
+
+.projects--wrapper{
+    margin-top: 24px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.project{
+    position: relative;
+    margin: 24px 0;
+    max-width: 1000px;
+    width: 100%;
+    border-radius: 32px;
+    overflow: hidden;
+}
+
+.project::after{
+    content: "";
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    transform: translateX(-100%);
+    background-color: #000000;
+    opacity: 0;
+    transition: all 300ms ease;
+}
+
+.project:hover::after{
+    border: 1px solid #000000;
+    opacity: 0.75;
+    transform: translateX(0);
+}
+
+.project__img{
+    width: 100%;
+    transform: scale(1.1);
+    transition: all 300ms ease;
+}
+
+.project:hover .project__img{
+    filter: blur(2px);
+    transform: scale(1.15);
+}
+
+.project__info{
+    position: absolute;
+    padding: 40px;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    transform: translateX(-100%);
+    opacity: 0;
+    transition: all 300ms ease;
+    z-index: 100;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.project:hover .project__info{
+    transform: translateX(0);
+    opacity: 1;
+}
+
+.project__title,
+.project__description,
+.project__stack{
+    color: var(--third-color);
+}
+
+.project__title{
+    font-size: 60px;
+    letter-spacing: 2px;
+    font-weight: 700;
+    line-height: 1;
+}
+
+.project__stack{
+    font-size: 22px;
+    font-weight: 500;
+    letter-spacing: 2px;
+}
+
+.project__description{
+    font-size: 20px;
+    letter-spacing: 1px;
+    line-height: 1.5;
+    margin: 20px 0;
+}
+
+.project__link{
+    font-size: 40px;
+    color: var(--third-color);
+    margin: 10px;
+}
+/* ========================
+           6.Contact
+   ======================== */
+#contact{
+    margin-top: 76px;
+}
+
+.contact--wrapper{
+    margin: 40px auto;
+    max-width: 1000px;
+}
+
+#contact__form{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+}
+
+.input__label{
+    font-size: 20px;
+    color: var(--third-color);
+    letter-spacing: 2px;
+    align-self: flex-start;
+}
+
+.contact__input{
+    margin: 8px 0;
+    padding: 6px;
+    width: 100%;
+    border-radius: 4px;
+    font-size: 18px;
+    border: none;
+    color: var(--third-color);
+    background-color: var(--secondary-color);
+    border-bottom: 2px solid var(--accent-color);
+}
+
+.contact__textarea{
+    width: 100%;
+    resize: vertical;
+    margin: 8px 0;
+    padding: 6px;
+    border: none;
+    font-size: 18px;
+    color: var(--third-color);
+    background-color: var(--secondary-color);
+    border-bottom: 2px solid var(--accent-color);
+}
+
+.contact__input:focus,
+.contact__textarea:focus{
+    outline: none;
+}
+
+.contact__loading,
+.contact__success{
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    z-index: -1;
+    opacity: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 300ms ease;
+}
+
+.contact__loading{
+    background-color: var(--primary-color);
+    color: var(--third-color);
+    font-size: 80px;
+}
+
+.fa-spinner{
+    animation: spin 800ms infinite;
+}
+
+.loading .contact__loading{
+    z-index: 100;
+    opacity: 1;
+}
+
+.contact__success{
+    border-radius: 32px;
+    background-color: green;
+    color: var(--third-color);
+    font-size: 50px;
+}
+
+.succes .contact__success{
+    z-index: 100;
+    opacity: 1;
+}
+
+.loading .contact__input,
+.loading .input__label,
+.loading .contact__textarea,
+.loading .btn,
+.succes .contact__input,
+.succes .input__label,
+.succes .contact__textarea,
+.succes .btn{
+    opacity: 0;
+}
+
+@keyframes spin {
+    0%{
+        transform: rotate(0);
+    }
+    100%{
+        transform: rotate(360deg);
+    }
+}
+
+
+/* ========================
+           7.Footer
+   ======================== */
+footer{
+    margin-top: 100px;
+    background-color: var(--secondary-color);
+    padding: 60px 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.footer--wrapper{
+    margin: 0 auto;
+    max-width: 1000px;
+}
+
+.go-to-top{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    width: 100px;
+}
+
+.footer-bee{
+    height: 50px;
+    animation: left-right 8s infinite linear;
+}
+
+.go-to-top__text{
+    position: absolute;
+    bottom: 50px;
+    color: var(--third-color);
+    animation: left-right-text 8s infinite linear;
+}
+
+@keyframes left-right {
+    0%{
+        transform: translate(0px, 0px) rotate(90deg) scale(0.6);
+    }
+
+    25%{
+        transform: translate(130px, 0px) rotate(90deg) scale(1);
+    }
+
+    30%{
+        transform: translate(130px, 0px) rotate(-90deg) scale(1);
+    }
+
+    45%{
+        transform: translate(0px, 0px) rotate(-90deg) scale(1);
+    }
+
+    65%{
+        transform: translate(-150px, 0px) rotate(-90deg) scale(1);
+    }
+
+    70%{
+        transform: translate(-150px, 0px) rotate(-90deg) scale(1);
+    }
+
+    80%{
+        transform: translate(-150px, 0px) rotate(90deg) scale(1);
+    }
+
+    100%{
+        transform: translate(0px, 0px) rotate(90deg) scale(0.6);
+    }
+}
+
+@keyframes left-right-text {
+    0%{
+        transform: translate(0px, 0px);
+    }
+
+    25%{
+        transform: translate(130px, 0px);
+    }
+
+    30%{
+        transform: translate(130px, 0px);
+    }
+
+    45%{
+        transform: translate(0px, 0px);
+    }
+
+    65%{
+        transform: translate(-150px, 0px);
+    }
+
+    70%{
+        transform: translate(-150px, 0px);
+    }
+
+    80%{
+        transform: translate(-150px, 0px);
+    }
+
+    100%{
+        transform: translate(0px, 0px);
+    }
 }
