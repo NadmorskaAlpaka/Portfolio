@@ -21,7 +21,7 @@
 
 <body>
     <div class="body--wrapper">
-        <i class="fa-solid fa-circle-half-stroke click" onclick="toogleMode()"></i>
+        <!-- <i class="fa-solid fa-circle-half-stroke click" onclick="toogleMode()"></i> -->
         <div class="nav--wrapper">
             <nav>
                 <figure class="logo--wrapper">
@@ -54,7 +54,10 @@
                     </ul>
                     <ul class="social__link--list">
                         <li class="social__link click">
-                            <a class="social__link--anchor" href="">
+                            <a class="social__link--anchor" 
+                                href="https://github.com/NadmorskaAlpaka"
+                                target="_blank"
+                            >
                                 <i class="fa-brands fa-github-square"></i>
                             </a>
                         </li>
@@ -64,7 +67,10 @@
                             </a>
                         </li>
                         <li class="social__link click">
-                            <a class="social__link--anchor" href="">
+                            <a class="social__link--anchor" 
+                                href="https://www.linkedin.com/in/grzegorz-szersze%C5%84-2808a3239/"
+                                target="_blank"
+                            >
                                 <i class="fa-brands fa-linkedin"></i>
                             </a>
                         </li>
@@ -73,6 +79,56 @@
                 <span class="copyright">
                     Copyright &copy; 2022<br> Grzegorz Szerszeń
                 </span>
+                <div class="mobile-menu">
+                    <ul class="mobile-menu--list">
+                        <li class="mobile-menu__link click" onclick="closeMenu()">
+                            <a href="#" class="mobile-menu--anchor">
+                                Home
+                            </a>
+                        </li>
+                        <li class="mobile-menu__link click" onclick="closeMenu()">
+                            <a href="#about" class="mobile-menu--anchor">
+                                About
+                            </a>
+                        </li>
+                        <li class="mobile-menu__link click" onclick="closeMenu()">
+                            <a href="#projects" class="mobile-menu--anchor">
+                                Projects
+                            </a>
+                        </li>
+                        <li class="mobile-menu__link click" onclick="closeMenu()">
+                            <a href="#contact" class="mobile-menu--anchor">
+                                Contact
+                            </a>
+                        </li>
+                    </ul>
+                    <ul class="mobile-social__link--list">
+                        <li class="mobile-social__link click">
+                            <a class="mobile-social__link--anchor" 
+                                href="https://github.com/NadmorskaAlpaka"
+                                target="_blank"
+                            >
+                                <i class="fa-brands fa-github-square"></i>
+                            </a>
+                        </li>
+                        <li class="mobile-social__link click">
+                            <a class="mobile-social__link--anchor" href="">
+                                <i class="fa-solid fa-file-arrow-down"></i>
+                            </a>
+                        </li>
+                        <li class="mobile-social__link click">
+                            <a class="mobile-social__link--anchor" 
+                                href="https://www.linkedin.com/in/grzegorz-szersze%C5%84-2808a3239/"
+                                target="_blank"
+                            >
+                                <i class="fa-brands fa-linkedin"></i>
+                            </a>
+                        </li>
+                    </ul>
+                    <i class="fa-solid fa-xmark close-menu__icon click" onclick="closeMenu()"></i>
+                </div>
+                <i class="fa-solid fa-bars open-menu__icon click" onclick="openMenu()"></i>
+                <i class="fa-solid fa-circle-half-stroke click" onclick="toogleMode()"></i>
             </nav>
         </div>
         <div class="content--wrapper">
@@ -169,12 +225,17 @@
                                         <span class="project__stack">ReactJS</span>
                                         <p class="project__description">
                                             MovieSharks is a website which is created to give a user easy and fast place
-                                            where he can find movies. Website utilizes The Movie DB API which provide
+                                            to find movies. Website utilizes The Movie DB API which provide
                                             huge amount of movies and details about them. ReactJs and technologies such
                                             as react-router, axios were used in the development process. Aplication have
                                             some amazing features like dynamic home page background which change after
                                             every site refresh, skeleton loading state. Webiste is fully responsive and
                                             designed for all type of devices.
+                                        </p>
+                                        <p class="project__description--short">
+                                            MovieSharks is a website which is created to give a user easy and fast place
+                                            to find movies. Website utilizes The Movie DB API which provide
+                                            huge amount of movies.
                                         </p>
                                         <div class="project__links">
                                             <a href="" class="project__link">
@@ -203,6 +264,10 @@
                                             will provide me more data for small changes to applay, hope website will be
                                             deployed on web soon.
                                         </p>
+                                        <p class="project__description--short">
+                                            Refreshed website of Matix bike company which produce tricycle bikes. Currently waiting for client response, hope website will be
+                                            deployed on web soon.
+                                        </p>
                                         <div class="project__links">
                                             <a href="" class="project__link">
                                                 <i class="fa-brands fa-github-square click"></i>
@@ -221,6 +286,11 @@
                                         <span class="project__title">Assan tuning</span>
                                         <span class="project__stack">HTML,CSS,JS</span>
                                         <p class="project__description">
+                                            Proposition of home page for car mechanic or workshop developed with HTML,
+                                            CSS and JS. Website is fully responsive and mobile-friendly implemented
+                                            mobile menu.
+                                        </p>
+                                        <p class="project__description--short">
                                             Proposition of home page for car mechanic or workshop developed with HTML,
                                             CSS and JS. Website is fully responsive and mobile-friendly implemented
                                             mobile menu.
@@ -265,13 +335,23 @@
             </div>
             <footer>
                 <div class="footer--wrapper">
-                    <div>
-                        <a class="go-to-top" href="#">
-                            <img class="footer-bee" src="/assets/bee.svg">
-                            <span class="go-to-top__text">Back to top</span>
-                        </a>
-                    </div>
+                    <ul class="footer__link--list ">
+                        <li class="footer__link click">
+                            <a class="footer__link--anchor link--hover-effect" href="">Resume - ENG</a>
+                        </li>
+                        <li class="footer__link click">
+                            <a class="footer__link--anchor link--hover-effect" href="#">
+                                TOP
+                            </a>
+                        </li>
+                        <li class="footer__link click">
+                            <a class="footer__link--anchor link--hover-effect" href="">Resume - PL</a>
+                        </li>
+                    </ul>
                 </div>
+                <span class="copyright--footer">
+                    Copyright &copy; 2022<br> Grzegorz Szerszeń
+                </span>
             </footer>
         </div>
     </div>
