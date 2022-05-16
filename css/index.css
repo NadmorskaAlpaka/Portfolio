@@ -24,18 +24,30 @@
 }
 
 :root{
-    --primary-color: #1c2c36;
+    /* --primary-color: #1c2c36;
     --secondary-color: #10181f; 
     --third-color: #FFFFFF;
     --accent-color: #FFCD2D;
+    transition: all 300ms ease; */
+    --primary-color: #e2e2e2;
+    --secondary-color: #dac292; 
+    --third-color: #000000;
+    --accent-color: #ad8a66;
+    transition: all 500ms ease;
+    
 }
 
 :root .light-mode{
-    transition: all 300ms ease;
-    --primary-color: #2F4858;
-    --secondary-color: #008C7F; 
+    /* --primary-color: #C7A58B;
+    --secondary-color: #A47855; 
     --third-color: #FFFFFF;
-    --accent-color: #FFCD2D;
+    --accent-color: #FFCD2D; */
+    --primary-color: #3a6b8f;
+    --secondary-color: #045d80; 
+    --third-color: #ebf2fa;
+    --accent-color: #a5be00;
+    transition: all 500ms ease;
+    
 }
 
 html{
@@ -569,12 +581,12 @@ nav{
     transform: translateX(0);
     opacity: 1;
 }
-
+ 
 .project__title,
 .project__description,
 .project__stack,
 .project__description--short{
-    color: var(--third-color);
+    color: #FFFFFF;
 }
 
 .project__title{
@@ -604,7 +616,7 @@ nav{
 
 .project__link{
     font-size: 40px;
-    color: var(--third-color);
+    color: #FFFFFF;
     margin: 10px;
 }
 /* ========================

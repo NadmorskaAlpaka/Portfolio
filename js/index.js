@@ -23,7 +23,7 @@ function contact(event){
             document.body.classList += " succes";
         }).catch(() => {
             document.body.classList.remove("succes");
-            alert("Opss, the email service is temporarily unavailable. Please contact me directly on grzegorz.szerszen01@gmail.com");
+            alert("Opss, the email service is temporarily unavailable. Please contact me directly on contact@grzegorzszerszen.com");
         })
 }
 
